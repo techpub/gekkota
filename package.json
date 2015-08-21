@@ -1,0 +1,15 @@
+{
+  "name": "gekkota",
+  "version": "0.0.1",
+  "description": "A modular approach for handling many Geckoboard custom widgets",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonmendes/gekkota.git"
+  },
+  "author": "Jason Mendes",
+  "dependencies": {
+    "gekoq": "0.0.7",
+    "request": "^2.61.0"
+  }
+}
