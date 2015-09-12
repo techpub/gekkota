@@ -9,13 +9,13 @@ function kawekaweau (widget) {
   fetch(widget)
   .then(filter)
   .then(push)
-  .catch(function(reason) { 
-    console.log(reason); 
+  .catch(reason => { 
+    console.log(reason.stack); 
   });
 }
 
 function setae (widgets) {
-  Promise.all(widgets.map(function(widget) {
+  Promise.all(widgets.map(widget => {
     kawekaweau(widget);
   }));
 }

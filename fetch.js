@@ -1,11 +1,10 @@
 const request = require('request');
 
 module.exports = function fetch (widget) {
-  return new Promise(
-    function(resolve, reject) {
-      request(widget.endpoint, function (error, response, body) {
+  return new Promise((resolve, reject) => {
+      request(widget.endpoint, (error, response, body) => {
         if (error) {
-          reject(new Error(error));
+          reject(error);
         } else {
           resolve({ 
             id: widget.id, 
@@ -14,6 +13,5 @@ module.exports = function fetch (widget) {
           });
         }
       });
-    }
-  );
+  });
 }
