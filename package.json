@@ -1,15 +1,21 @@
 {
   "name": "gekkota",
-  "version": "0.0.1",
-  "description": "A modular approach for handling many Geckoboard custom widgets",
+  "version": "1.0.0",
+  "description": "Boilerplate for a custom integration for Geckoboard's custom Push method widgets",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jasonmendes/gekkota.git"
+  "scripts": {
+    "test": "",
+    "start": "babel-node index"
+  },
+  "engines": {
+    "node": "<=0.12.7"
   },
   "author": "Jason Mendes",
+  "license": "MIT",
   "dependencies": {
+    "babel": "^5.8.23",
     "gekoq": "0.0.7",
-    "request": "^2.61.0"
+    "request": "^2.61.0",
+    "require-directory": "^2.1.1"
   }
 }
