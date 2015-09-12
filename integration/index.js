@@ -1,4 +1,4 @@
-const trace = require('../trace.js');
+const trace = require('./lib/trace.js');
 
 const gekoq = require('gekoq');
 // Here our Geckoboard API Key is set as an environment variable

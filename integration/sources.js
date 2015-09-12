@@ -1,9 +1,9 @@
 // This is a helper function to aid debugging promises. It simply exposes the .stack property of an error
-const trace = require('../trace.js');
+const trace = require('./lib/trace.js');
 
 // fetch takes the arguments of an endpoint and an object with the properties `username` and `password`
 // to authenticate with the remote API
-const fetch = require('./fetch.js');
+const fetch = require('./lib/fetch.js');
 
 
 // The authentication to the remote API stored as environment variables.
