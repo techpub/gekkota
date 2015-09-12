@@ -2,6 +2,8 @@
 
 Boilerplate for a custom integration for Geckoboard's custom Push method widgets. 
 
+*Disclaimer*: This comes without guarentee or warranty. I've done my best to create something sensible, but still use with caution and exercise your judgement.
+
 ### Install
 
 ```
