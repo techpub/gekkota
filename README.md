@@ -4,6 +4,8 @@ Boilerplate for a custom integration for Geckoboard's custom **Push** method wid
 
 *Disclaimer*: This comes without guarentee or warranty. I've done my best to create something sensible, but still use with caution and exercise your judgement.
 
+###### (The name? It's the [infraorder of reptiles in the suborder Scleroglossa, comprising all geckos](https://en.wikipedia.org/wiki/Gekkota))
+
 ### Install
 
 ```
@@ -30,15 +32,15 @@ The entry point is in `index.js` where a loop is defined that runs every `TIME` 
 
 This does:
 
-* Request all data from remote APIs, defined in `integration/sources.js`. 
-* Pass the request data to the widgets to be filtered and build a payload
+* Request all data from remote APIs (using `Promise.all` mapped over the array of sources), defined in `integration/sources.js`. 
+* Pass the request data to the widgets to be filtered and build a payload (again using `Promisea.all` mapped over the array of widgets)
 * Push the widgets payloads to Geckoboard
 
-`integration/sources.js` exports an array of Objects, each expecting an `accumulate` property whose value is a function that returns data from the remote API. (That file has a detailed example of how to structure that)
+`integration/sources.js` exports an array of Objects, each expecting an `accumulate` property whose value is a function that returns data (via `resolve()`) from the remote API. (That file has a detailed example of how to structure that)
 
 `integration/widgets/index.js` maps all of the files in `widgets/` to an Object that `integration/index.js` references. Each `widget.js` should have:
 
-* A `widget` function that accepts the filtered data from a `filter` method and returns an Object with the widget's payload and Push method ID:
+* A `widget` function that accepts the filtered data from a `filter` method which returns an Object (as a `resolve()`d Promise) with the widget's payload and Push method ID:
 
 ```
 function widget(value) {
