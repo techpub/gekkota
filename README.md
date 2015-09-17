@@ -10,9 +10,17 @@ Boilerplate for a custom integration for Geckoboard's custom **Push** method wid
 git clone https://github.com/jasonmendes/gekkota.git && cd gekkota && npm install
 ```
 
+### Run
+
+```
+$ npm start
+```
+
 ### Set up
 
 If you'd like any help setting this up for your own data, just send me a message or create an issue here on the repo.
+
+Below is a brief outline of how everything fits together. As well, all of the source files are well commented explaining how things work. 
 
 * Define your remote data sources and fetches in `integration/sources.js`
 * Build your widgets in `integration/widgets/`. A good way is to name them as they are named on your dashboard, e.g. `widgets/revenue-metric.js` or `widgets/sales-last-week.js`
@@ -61,10 +69,4 @@ module.exports.filter = function filter(arrayOfData) {
 ```
 
 * Finally, after all the widgets have returned their payloads (with their Push IDs), the `gekoq.push` method is called, which pushes the data to your dashboard. 
-
-### Run
-
-```
-$ npm start
-```
 
