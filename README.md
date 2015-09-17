@@ -20,7 +20,7 @@ If you'd like any help setting this up for your own data, just send me a message
 
 The entry point is in `index.js` where a loop is defined that runs every `TIME` minutes. That is, if `TIME` is set to `5`, it will run every five minutes. 
 
-The does this:
+This does:
 
 * Request all data from remote APIs, defined in `integration/sources.js`. 
 * Pass the request data to the widgets to be filtered and build a payload
