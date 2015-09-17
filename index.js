@@ -6,14 +6,14 @@ const integration = require('./integration');
  * for our widgets, and finally posting it to Geckoboard,
  * every five minutes
  *
- * 1000 milliseconds * 60 seconds per minute * 5
- *
  * See here for the naming: https://en.wikipedia.org/wiki/M%C3%B6bius_strip 
  */
 
+const TIME = 5; // Minutes
+
 function moebiusStrip() {
   integration();
-  setTimeout(moebiusStrip, 1000*60*5); 
+  setTimeout(moebiusStrip, 1000*60*TIME); 
 } 
 
 // Initiaize the loop

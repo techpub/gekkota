@@ -2,6 +2,9 @@ const trace = require('./lib/trace.js');
 
 const gekoq = require('gekoq');
 // Here our Geckoboard API Key is set as an environment variable
+// E.g. in a terminal: $ export GECKOBOARD_API_KEY=abc123
+// Or store this in a file like auth.env then 
+// $ source auth.env
 gekoq.key(process.env.GECKOBOARD_API_KEY);
 
 // This loads all of the widgets in the widgets/ directory

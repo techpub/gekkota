@@ -7,7 +7,7 @@ const fetch = require('./lib/fetch.js');
 
 
 // The authentication to the remote API stored as environment variables.
-// E.g. in a file `auth.env`
+// E.g. in a file `auth.env` and then in the terminal $ source auth.env
 // SERVICE_USERNAME=username
 // SERVICE_PASSWORD=password
 
