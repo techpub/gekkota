@@ -4,7 +4,9 @@ Boilerplate for a custom integration for Geckoboard's custom **Push** method wid
 
 *Disclaimer*: This comes without guarentee or warranty. I've done my best to create something sensible, but still use with caution and exercise your judgement.
 
-###### (The name? It's the [infraorder of reptiles in the suborder Scleroglossa, comprising all geckos](https://en.wikipedia.org/wiki/Gekkota))
+(The name? It's the [infraorder of reptiles in the suborder Scleroglossa, comprising all geckos](https://en.wikipedia.org/wiki/Gekkota))
+
+Note: This doesn't work with Node v4, as it relies on the `request` module which throws a `socket hang up` error. For now, use <=v0.12.7 (and something like [nvm](https://github.com/creationix/nvm))
 
 ### Install
 
